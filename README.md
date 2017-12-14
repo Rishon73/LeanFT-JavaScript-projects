@@ -1,7 +1,7 @@
 # LeanFT-JavaScript-projects
 
 
-Like in every LeanFT JavaScript, we need to install the LeanFT JavaScript SDK in your testing project folder:
+For every LeanFT JavaScript, we need to install the LeanFT JavaScript SDK in the testing project folder (this is done once):
 
 
 **mocha -reporter=./node_modules/leanft.report/mocha/mochaReporter.js**
