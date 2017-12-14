@@ -1,4 +1,5 @@
 
+
 var LFT = require('leanft');
 var SDK = LFT.SDK;
 var Web = LFT.Web;
@@ -7,13 +8,12 @@ var whenDone = LFT.whenDone;
 var verify = require('leanft/verify');
 
 describe('demo',function(){
-// set the default Jasmine time out (if not using Jasmine: remove this line)
+	// set the default Jasmine time out (if not using Jasmine: remove this line)
 	jasmine : jasmine.DEFAULT_TIMEOUT_INTERVAL = 30 * 1000;
 
 	var browser;
 
 	beforeAll(function(done){
-	//before(function(done){
 		LFT.init({});
 
 		whenDone(done);
