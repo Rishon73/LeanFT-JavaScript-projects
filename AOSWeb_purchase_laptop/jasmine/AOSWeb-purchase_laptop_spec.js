@@ -1,5 +1,4 @@
 
-
 var LFT = require('leanft');
 var SDK = LFT.SDK;
 var Web = LFT.Web;
@@ -9,12 +8,12 @@ var verify = require('leanft/verify');
 
 describe('demo',function(){
 // set the default Jasmine time out (if not using Jasmine: remove this line)
-//jasmine : jasmine.DEFAULT_TIMEOUT_INTERVAL = 30 * 1000;
+	jasmine : jasmine.DEFAULT_TIMEOUT_INTERVAL = 30 * 1000;
 
 	var browser;
 
-	//beforeAll(function(done){
-	before(function(done){
+	beforeAll(function(done){
+	//before(function(done){
 		LFT.init({});
 
 		whenDone(done);
@@ -103,16 +102,6 @@ describe('demo',function(){
 		var checkOutBtn = browser.$(Web.Button().buttonType("submit").name(/CHECKOUT.*/).tagName("BUTTON"))
 		checkOutBtn.click();
 
-/*
-browser.$(Web.Edit().type("text").tagName("INPUT").name("userName"))
-
-		var checkOutBtn = browser.$(Web.Button({
-				buttonType: "submit",
-				name: "CHECKOUT  ($1,261.99)",
-				tagName: "BUTTON"
-			}));
-		checkOutBtn.click();
-*/
 		var nextBtn = browser.$(Web.Button({
 				buttonType: "submit",
 				name: "NEXT",
@@ -166,7 +155,7 @@ browser.$(Web.Edit().type("text").tagName("INPUT").name("userName"))
 		whenDone(done);
 	});
 
-	after(function(done){
+	afterAll(function(done){
 		LFT.cleanup();
 
 		whenDone(done);
