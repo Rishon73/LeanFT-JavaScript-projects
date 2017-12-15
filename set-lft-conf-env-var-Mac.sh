@@ -11,7 +11,7 @@ if [[ $(uname -s) == Linux ]]
 then
     echo "--- This script only works on Mac."
     echo "--- To set evn var on Linux, use:"
-    echo "--- \"export LFT_TEST_CONFIG=<FULL_PATH_TO_CONF_FILE>\""
+    echo "--- export LFT_TEST_CONFIG=<FULL_PATH_TO_CONF_FILE>
     exit
 else
     launchctl setenv LFT_TEST_CONFIG $1
