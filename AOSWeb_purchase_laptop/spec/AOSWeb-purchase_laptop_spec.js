@@ -14,7 +14,7 @@ describe('demo',function(){
 	var browser;
 
 	beforeAll(function(done){
-		LFT.init(config);
+		LFT.init("config");
 
 		//LFT.Reporter.config().reportLevel = LFT.Reporter.ReportLevel.On;
 		whenDone(done);
